@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shriram Computer's Foundation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #FFF8E7;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(to right, #FF9933, #FFF8E7);
+      padding: 20px;
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .logo {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      margin-right: 15px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    }
+    h1, h2, h3 {
+      font-family: 'Cinzel', serif;
+      color: #800000;
+    }
+    .nav {
+      text-align: center;
+      background-color: #FFEFDB;
+      padding: 10px;
+      font-weight: bold;
+    }
+    .nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #800000;
+    }
+    .section {
+      background-color: #fff;
+      margin: 20px;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    .event-img, .chadawa-img, .maha-img, .qr-img {
+      width: 100%;
+      border-radius: 10px;
+      margin: 15px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .package-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .package-table th, .package-table td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: left;
+    }
+    .package-table th {
+      background-color: #FFEFDB;
+    }
+    .cta-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #FF9933;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    .cta-button:hover {
+      background-color: #e67e22;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    input[type="text"], input[type="tel"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    .footer {
+      text-align: center;
+      background-color: #FFEFDB;
+      padding: 15px;
+      margin-top: 30px;
+    }
+    #success-message {
+      color: green;
+      font-weight: bold;
+      margin-top: 20px;
+      text-align: center;
+    }
+  </style>
+  <script>
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      document.getElementById('success-message').innerText = 'Form submitted successfully! Proceed to payment below.';
+      document.getElementById('payment-section').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <img src="https://i.ibb.co/LX8gQjrw/IMG-20250413-WA0002.jpg" alt="Logo" class="logo">
+  <h1>Shriram Computer's Foundation</h1>
+</div>
+
+<!-- Navigation -->
+<div class="nav">
+  <a href="#event">Event</a>
+  <a href="#packages">Packages</a>
+  <a href="#chadawa">Chadawa Seva</a>
+  <a href="#mahakaal">Mahakaal</a>
+  <a href="#form">Customer Info</a>
+  <a href="#payment-section">Payment</a>
+</div>
+
+<!-- Customer Info Form -->
+<div class="section" id="form">
+  <h2>Customer Information</h2>
+  <form onsubmit="handleFormSubmit(event)">
+    <div class="form-group">
+      <label for="name">नाम (Name)</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="gotra">गोत्र (Gotra)</label>
+      <input type="text" id="gotra" name="gotra" required>
+    </div>
+    <div class="form-group">
+      <label for="package">Package Number</label>
+      <input type="text" id="package" name="package" required>
+    </div>
+    <div class="form-group">
+      <label for="contact">संपर्क संख्या (Contact Number)</label>
+      <input type="tel" id="contact" name="contact" required>
+    </div>
+    <button type="submit" class="cta-button">Submit</button>
+    <div id="success-message"></div>
+  </form>
+</div>
+
+<!-- Payment Section -->
+<div class="section" id="payment-section">
+  <h2>Secure Payment Instructions</h2>
+  <p>After submitting your details, kindly proceed with the payment.</p>
+  <h3>Bank Transfer Details:</h3>
+  <ul>
+    <li><strong>Account Name:</strong> For Computers</li>
+    <li><strong>Account Number:</strong> 0748113100723</li>
+    <li><strong>IFSC Code:</strong> PUNB0074072</li>
+    <li><strong>Branch:</strong> Chandpur, Bijnor, Uttar Pradesh</li>
+  </ul>
+  <img src="https://i.ibb.co/gLY83WR8/IMG-20250413-WA0004.jpg" alt="QR Code" class="qr-img">
+  <p style="font-weight:bold; color:green; text-align:center;">Once the transaction is completed, you will receive confirmation via WhatsApp/SMS.</p>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <p>© 2025 Shriram Computer's Foundation. Designed with devotion for divine blessings.</p>
+</div>
+
+</body>
+</html>
